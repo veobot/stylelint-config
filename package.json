@@ -1,0 +1,84 @@
+{
+  "name": "@veobot/stylelint-config",
+  "version": "1.0.0",
+  "description": "Veo Robotics Stylelint rules for all CSS / SCSS styles",
+  "author": {
+    "name": "Ty-Lucas Kelley",
+    "email": "ty@greylocklabs.com",
+    "url": "https://tylucaskelley.com"
+  },
+  "homepage": "https://github.com/veobot/stylelint-config",
+  "bugs": "https://github.com/veobot/stylelint-config/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veobot/stylelint-config"
+  },
+  "license": "MIT",
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "lint",
+    "css",
+    "sass",
+    "scss",
+    "vue"
+  ],
+  "scripts": {
+    "lint": "npm run lint:js && npm run lint:md",
+    "lint:js": "eslint --report-unused-disable-directives index.js test/index.test.js",
+    "lint:md": "markdownlint README.md CHANGELOG.md",
+    "pretest": "npm run lint",
+    "test": "jest",
+    "prepublishOnly": "npm test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">= 8"
+  },
+  "jest": {
+    "preset": "jest-preset-stylelint",
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "setupFiles": [
+      "<rootDir>/jest.init.js"
+    ]
+  },
+  "peerDependencies": {
+    "stylelint": "^9.10.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-processor-html": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.3.3",
+    "@babel/preset-env": "7.3.1",
+    "@typescript-eslint/eslint-plugin": "1.4.0",
+    "@typescript-eslint/parser": "1.4.0",
+    "@veobot/eslint-config": "1.0.0",
+    "@vue/eslint-config-typescript": "4.0.0",
+    "babel-jest": "24.1.0",
+    "babel-polyfill": "6.26.0",
+    "eslint": "5.14.1",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-jest": "22.3.0",
+    "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-react": "7.12.4",
+    "eslint-plugin-security": "1.4.0",
+    "eslint-plugin-vue": "5.2.2",
+    "jest": "24.1.0",
+    "jest-preset-stylelint": "1.3.0",
+    "markdownlint-cli": "0.13.0",
+    "react": "16.8.2",
+    "stylelint": "9.10.1",
+    "stylelint-config-standard": "18.2.0",
+    "stylelint-processor-html": "1.0.0",
+    "typescript": "3.3.3"
+  }
+}
