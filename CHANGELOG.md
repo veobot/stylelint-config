@@ -10,6 +10,12 @@ All notable changes to this project will be documented in this file. The format 
 
 - N/A
 
+## [1.1.0](https://github.com/veobot/stylelint-config/releases/tag/1.0.0) - 2019-06-19
+
+### Changed
+
+- Upgrade dependencies
+
 ## [1.0.0](https://github.com/veobot/stylelint-config/releases/tag/1.0.0) - 2019-02-19
 
 ### Added
